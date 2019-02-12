@@ -1,8 +1,10 @@
 // Font
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300|Thasadith');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt|Staatliches');
 
 $fontMain: 'Quicksand', sans-serif;
-$fontCool: 'Thasadith', sans-serif;
+$fontTest1: 'Staatliches', cursive;
+$fontTest2: 'Rock Salt', cursive;
 
 // Colors
 
@@ -18,3 +20,9 @@ $greyDark: #2C3A47;
 $greyLight: #485460;
 
 $white: #ffffff;
+
+
+// Shadow - Glow
+
+$textGreenGlow: .1rem .1rem 1rem $greenLight;
+$boxShadow: 0 1.5rem 4rem rgba($greyDark, .15);

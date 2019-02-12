@@ -4,7 +4,7 @@
       <v-flex xs12>
         <transition name="downButtonAnimation">
           <button @click="scrollDown" v-if="isVisible" class="downButton">
-            <i class="fas fa-angle-down downButtonIcon"></i>
+            <i class="fas fa-angle-down downButton--icon"></i>
           </button>
         </transition>
       </v-flex>
@@ -36,7 +36,7 @@ export default {
       window.scrollBy({
         top: 151,
         left: 0,
-        behavior: 'smooth'
+        behavior: "smooth"
       });
     }
   },
@@ -52,6 +52,7 @@ export default {
 
 <style scoped lang="scss">
 @import "../../sass/variables.scss";
+@import "../../sass/animations.scss";
 
 .buttonBox {
   position: fixed;
@@ -61,23 +62,30 @@ export default {
   overflow-y: auto;
 }
 
-.downButtonIcon {
-  font-size: 4rem;
-  color: $greenMedium;
-  cursor: pointer;
+.downButton {
+   outline: none;
+  &--icon {
+    font-size: 4rem;
+    color: $greenMedium;
+    cursor: pointer;
+    translate: all 1s ease;
+
+    &:hover {
+      text-shadow: $textGreenGlow;
+      transition: all .4s;
+    }
+  }
 }
 
 .downButtonAnimation-enter-active {
-    transition: all 2s ease;
+  transition: all 2s ease;
 }
 .downButtonAnimation-leave-active {
-  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.downButtonAnimation-enter, .downButtonAnimation-leave-to
-{
+.downButtonAnimation-enter,
+.downButtonAnimation-leave-to {
   transform: translateY(2rem);
   opacity: 0;
 }
-
-
 </style>
