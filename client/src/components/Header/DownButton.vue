@@ -60,19 +60,25 @@ export default {
   max-width: 100%;
   max-height: 500px;
   overflow-y: auto;
+  
+  
 }
 
 .downButton {
    outline: none;
+   
   &--icon {
     font-size: 4rem;
     color: $greenMedium;
     cursor: pointer;
     translate: all 1s ease;
-
+    display: bounce;
+    
     &:hover {
       text-shadow: $textGreenGlow;
       transition: all .4s;
+      transform: translateY(.2rem);
+
     }
   }
 }
@@ -88,4 +94,6 @@ export default {
   transform: translateY(2rem);
   opacity: 0;
 }
+
+
 </style>
