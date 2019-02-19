@@ -1,17 +1,30 @@
 <template>
     <div>
-        <ol>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-        </ol>
+        <navigation-logo />
+        <navigation-menu />
     </div>
 </template>
 
 <script>
+import NavigationLogo from'./NavigationLogo'
+import NavigationMenu from'./NavigationMenu'
+
 export default {
-    
-}
+  data() {
+    return {
+
+    }
+  },
+
+  components:{
+      NavigationLogo,
+      NavigationMenu
+  },
+
+  methods: {
+      
+  }
+};
 </script>
 
 <style lang="scss">
