@@ -1,13 +1,15 @@
 <template>
     <div>
         <navigation-logo />
-        <navigation-menu />
+        <navigation-list />
+        <navigation-menu-icon />
     </div>
 </template>
 
 <script>
 import NavigationLogo from'./NavigationLogo'
-import NavigationMenu from'./NavigationMenu'
+import NavigationMenuIcon from'./NavigationMenuIcon'
+import NavigationList from'./NavigationList'
 
 export default {
   data() {
@@ -18,7 +20,8 @@ export default {
 
   components:{
       NavigationLogo,
-      NavigationMenu
+      NavigationList,
+      NavigationMenuIcon
   },
 
   methods: {
