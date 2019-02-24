@@ -12,7 +12,6 @@ import Heading from './Heading.vue'
 export default {
   data() {
     return {
-
     }
   },
   

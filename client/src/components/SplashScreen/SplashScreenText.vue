@@ -1,10 +1,21 @@
 <template>
   <v-container grid-list-md text-xs-center class="headerBox">
     <v-layout row wrap>
-      <v-flex xs12>
-        <h1 class="mainH1 mainH1--1">Victor 
-          <span class="mainH1--dot">Persson</span>
+      <v-flex xs6>
+        <h1 class="mainH1 mainH1--1"> {{ h1 }} 
+          <span class="mainH1--dot">{{ dot }}</span>
         </h1>
+      </v-flex>
+      <v-flex xs6>
+        <h1 class="mainH1 mainH1--2"> {{ h2 }} </h1>
+      </v-flex>
+    </v-layout>
+        <v-layout row wrap>
+      <v-flex xs12>
+        <h1 class="mainH1 mainH1--3"> {{ h3 }} </h1>
+      </v-flex>
+      <v-flex xs12>
+        <h1 class="mainH1 mainH1--4"> {{ h4 }} </h1>
       </v-flex>
     </v-layout>
   </v-container>
@@ -15,7 +26,11 @@
 export default {
   data() {
     return {
-
+      h1: 'Web design',
+      h2: 'Front end',
+      h3: 'UX',
+      h4: 'JS',
+      dot: '.'
     }
   },
 

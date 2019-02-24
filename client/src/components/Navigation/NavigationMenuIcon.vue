@@ -1,10 +1,13 @@
 <template>
     <div>
         <div class="menuBackground"></div>
-        <a href="#" @click="toggleMenu" v-bind:class="{iconActive: isMenuActive == true, 'menuActive': isMenuActive == true}" class="menuBox">
-                <span class="menuBar menuBar--1"></span>
-                <span class="menuBar menuBar--2"></span>
-                <span class="menuBar menuBar--3"></span>
+        <a href="#" @click="toggleMenu" 
+            v-bind:class="{
+                iconActive: isIconActive == true
+                }" class="menuBox">
+            <span class="menuBar menuBar--1"></span>
+            <span class="menuBar menuBar--2"></span>
+            <span class="menuBar menuBar--3"></span>
         </a>
     </div>
 </template>
@@ -14,7 +17,6 @@
 export default {
   data() {
     return {
-        isMenuActive: false,
         isIconActive: false
 
     }
@@ -22,7 +24,7 @@ export default {
 
   methods: {
       toggleMenu: function() {
-          this.isMenuActive = !this.isMenuActive
+          this.isIconActive = !this.isIconActive
       },
   }
 };
@@ -32,22 +34,6 @@ export default {
 <style scoped lang="scss">
 @import '../../sass/variables.scss';
 
-.menuBackground {
-    background: linear-gradient( to right, #18ECC0, #00b894);
-    transform: rotate(20deg);
-    position: fixed;
-    top: -2.5rem;
-    right: -2rem;
-    padding: 5rem;
-    transition: all 1s;
-
-    &.menuActive {
-        transform: rotate(0deg);
-        z-index: 1;
-        padding: 100%;
-
-    }
-}
 
 .menuBox {
     z-index: 10;
@@ -88,6 +74,7 @@ export default {
 
     &:hover {
         .menuBar {
+        background: $greenMedium;
         }
         .menuBar--1 {
         width: 2rem;
