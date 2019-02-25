@@ -27,7 +27,7 @@ export default {
     position: fixed;
     left: 1rem;
     top: 1rem;
-    animation: slide-in-left 1s;
+    animation: slide-in-left 1.5s;
 }
 
 

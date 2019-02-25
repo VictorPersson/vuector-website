@@ -43,7 +43,7 @@ export default {
     display: block;
     top: 2rem;
     right: 2rem;
-    animation: slide-in-right 1s;
+    animation: slide-in-right 2s;
 
 
 .menuBar {

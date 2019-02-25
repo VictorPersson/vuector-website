@@ -1,13 +1,9 @@
 <template>
-  <v-container grid-list-md text-xs-center class="headerBox">
-    <v-layout row wrap>
-      <v-flex xs12>
+  <div class="headerBox">
         <h1 class="mainH1 mainH1--1">Victor 
           <span class="mainH1--dot">Persson</span>
         </h1>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -21,24 +17,28 @@ export default {
 
   methods: {
       
-  }
+  },
+
 };
 
 </script>
 
 <style scoped lang="scss">
 @import '../../sass/variables.scss';
+@import '../../sass/animations.scss';
 
 .headerBox {
  height: 100vh;
+
 }
 
 .mainH1 {
+  text-align: center;
   font-family: $fontTest1;
   color: $greenMedium;
   text-transform: uppercase;
   font-weight: 800;
-  animation: slide-in-left;
+  animation: slide-in-top .8s;
 
   &--1 {
     font-size: 8rem;
