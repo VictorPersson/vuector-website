@@ -1,13 +1,46 @@
-@keyframes bounce {
+@keyframes slide-in-right {
     0% {
-        transform: translateY(0)
-    }
-    
-    40% {
-        transform: translateY(-2)
+        opacity: 0;
+        transform: translateX(20rem);
     }
 
-    60% {
-        transform: translateY(-1)
+    80% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(7);
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    80% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(7);
     }
 }

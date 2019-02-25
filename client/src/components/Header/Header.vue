@@ -19,6 +19,7 @@ export default {
     DownButton,
     Heading
   }
+  
 };
 
 </script>

@@ -21,11 +21,13 @@ export default {
 
 <style scoped lang="scss">
 @import '../../sass/variables.scss';
+@import '../../sass/animations.scss';
 
 .logoBox {
     position: fixed;
     left: 1rem;
     top: 1rem;
+    animation: slide-in-left 1s;
 }
 
 

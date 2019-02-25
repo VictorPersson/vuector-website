@@ -18,7 +18,6 @@ export default {
   data() {
     return {
         isIconActive: false
-
     }
   },
 
@@ -33,6 +32,7 @@ export default {
 
 <style scoped lang="scss">
 @import '../../sass/variables.scss';
+@import '../../sass/animations.scss';
 
 
 .menuBox {
@@ -43,6 +43,7 @@ export default {
     display: block;
     top: 2rem;
     right: 2rem;
+    animation: slide-in-right 1s;
 
 
 .menuBar {

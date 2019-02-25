@@ -38,6 +38,7 @@ export default {
   color: $greenMedium;
   text-transform: uppercase;
   font-weight: 800;
+  animation: slide-in-left;
 
   &--1 {
     font-size: 8rem;
