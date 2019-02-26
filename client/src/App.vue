@@ -41,7 +41,7 @@ export default {
   },
 
   created() {
-    this.splashScreenTimer()
+    // this.splashScreenTimer()
   }
 }
 </script>

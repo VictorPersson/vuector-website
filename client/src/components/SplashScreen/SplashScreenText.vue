@@ -1,36 +1,24 @@
 <template>
-  <v-container grid-list-md text-xs-center class="headerBox">
-    <v-layout row wrap>
-      <v-flex xs6>
-        <h1 class="mainH1 mainH1--1"> {{ h1 }} 
-          <span class="mainH1--dot">{{ dot }}</span>
-        </h1>
-      </v-flex>
-      <v-flex xs6>
-        <h1 class="mainH1 mainH1--2"> {{ h2 }} </h1>
-      </v-flex>
-    </v-layout>
-        <v-layout row wrap>
-      <v-flex xs12>
-        <h1 class="mainH1 mainH1--3"> {{ h3 }} </h1>
-      </v-flex>
-      <v-flex xs12>
-        <h1 class="mainH1 mainH1--4"> {{ h4 }} </h1>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <div class="headerBox">
+    <h1 class="headerText headerText--1"> {{ h1 }} </h1>
+    <h1 class="headerText headerText--2"> {{ h2 }} </h1>
+    <h1 class="headerText headerText--3"> {{ h3 }} </h1>
+    <h1 class="headerText headerText--4"> {{ h4 }} </h1>
+    <h1 class="headerText headerText--5"> {{ h5 }} </h1>
+  </div>
 </template>
+
 
 <script>
 
 export default {
   data() {
     return {
-      h1: 'Web design',
+      h1: 'Software',
       h2: 'Front end',
-      h3: 'UX',
-      h4: 'JS',
-      dot: '.'
+      h3: 'Web',
+      h4: 'design',
+      h5: 'JS'
     }
   },
 
@@ -43,33 +31,64 @@ export default {
 
 <style scoped lang="scss">
 @import '../../sass/variables.scss';
+@import '../../sass/animations.scss';
 
 .headerBox {
  height: 100vh;
 }
 
-.mainH1 {
+.headerText {
   font-family: $fontTest1;
   color: $greenMedium;
   text-transform: uppercase;
   font-weight: 800;
+  opacity: 0;
+  animation: fall-down 1s;
+  animation-fill-mode: forwards;
 
   &--1 {
-    font-size: 8rem;
+    font-size: 12rem;
+    position: fixed;
+    bottom: 0;
+    left: 2rem;
+    color: $greyDark;
+    animation-delay: .2s;
   }
 
   &--2 {
-    font-size: 6rem;
+    font-size: 8rem;
+    position: fixed;
+    bottom: 12rem;
+    left: 2rem;
+    animation-delay: .4s;
   }
 
   &--3 {
-    font-size: 10rem;
+    font-size: 6rem;
+    position: fixed;
+    bottom: 20rem;
+    left: 2rem;
     color: $greyDark;
+    animation-delay: .6s;
   }
 
-  &--dot {
-    color: $greyDark;
+    &--4 {
+    font-size: 6rem;
+    position: fixed;
+    bottom: 20rem;
+    left: 12rem;
+    animation-delay: .8s;
   }
+
+    &--5 {
+    font-size: 3.2rem;
+    position: fixed;
+    bottom: 26rem;
+    left: 2rem;
+    animation-delay: 1s;
+  }
+
+
 }
 
 </style>

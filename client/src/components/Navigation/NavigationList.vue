@@ -1,6 +1,5 @@
 <template>
-    <div class="logoBox">
-        <li></li>
+    <div class="menuBox">
     </div>
 </template>
 
@@ -22,11 +21,6 @@ export default {
 <style scoped lang="scss">
 @import '../../sass/variables.scss';
 
-.logoBox {
-    position: fixed;
-    left: 1rem;
-    top: 1rem;
-}
 
 
 </style>

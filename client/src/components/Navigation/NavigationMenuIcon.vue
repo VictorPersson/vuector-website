@@ -17,7 +17,8 @@
 export default {
   data() {
     return {
-        isIconActive: false
+        isIconActive: false,
+        isMenuActive: false
     }
   },
 
