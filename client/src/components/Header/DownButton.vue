@@ -34,7 +34,7 @@ export default {
     scrollDown() {
       console.log("Button pressed");
       window.scrollBy({
-        top: 151,
+        top: 500,
         left: 0,
         behavior: "smooth"
       });

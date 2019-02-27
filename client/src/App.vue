@@ -36,12 +36,12 @@ export default {
         this.splashScreenShow = false;
         this.splashScreenHidden = true;
         console.log("Splash done")
-      }, 200*2);
+      }, 1450*2);
     }
   },
 
   created() {
-    // this.splashScreenTimer()
+   this.splashScreenTimer()
   }
 }
 </script>

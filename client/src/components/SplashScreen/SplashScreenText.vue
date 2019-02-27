@@ -34,7 +34,11 @@ export default {
 @import '../../sass/animations.scss';
 
 .headerBox {
+ background: $greyDark;
  height: 100vh;
+ animation: transistion-top 1s;
+ animation-delay: 2s;
+ animation-fill-mode: forwards;
 }
 
 .headerText {
@@ -51,7 +55,7 @@ export default {
     position: fixed;
     bottom: 0;
     left: 2rem;
-    color: $greyDark;
+    color: $white;
     animation-delay: .2s;
   }
 
@@ -68,7 +72,7 @@ export default {
     position: fixed;
     bottom: 20rem;
     left: 2rem;
-    color: $greyDark;
+    color: $white;
     animation-delay: .6s;
   }
 

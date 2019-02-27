@@ -1,13 +1,15 @@
 <template>
-  <div>
-      <heading />
+  <div class="headerBox">
+      <heading-title />
+      <heading-text />
       <down-button />
   </div>
 </template>
 
 <script>
 import DownButton from './DownButton.vue'
-import Heading from './Heading.vue'
+import HeadingTitle from './HeadingTitle.vue'
+import HeadingText from './HeadingText.vue'
 
 export default {
   data() {
@@ -16,8 +18,9 @@ export default {
   },
   
   components: {
+    HeadingTitle,
+    HeadingText,
     DownButton,
-    Heading
   }
   
 };
@@ -26,6 +29,11 @@ export default {
 
 <style scoped lang="scss">
 @import '../../sass/variables.scss';
+@import '../../sass/animations.scss';
 
+
+.headerBox {
+  height: 100vh;
+}
 
 </style>
