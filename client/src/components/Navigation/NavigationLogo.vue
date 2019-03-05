@@ -1,6 +1,6 @@
 <template>
     <div class="logoBox">
-        Logo
+        <img class="logoBox--image" src="../../assets/beta_logo.png" alt="">
     </div>
 </template>
 
@@ -28,7 +28,13 @@ export default {
     left: 1rem;
     top: 1rem;
     animation: slide-in-left 1.5s;
+
+    &--image {
+      width: 8vw;
+    }
 }
+
+
 
 
 </style>

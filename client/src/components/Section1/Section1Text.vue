@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid grid-list-sm>
+  <v-container fluid grid-list-sm class="section1Box">
     <v-layout row wrap>
       <v-flex d-flex xs12 sm12>
         <p class="headerText">
@@ -38,6 +38,10 @@ export default {
     font-family: $fontMain;
     font-size: 2rem;
     
+}
+
+.section1Box {
+    height: 100vh;
 }
 
 

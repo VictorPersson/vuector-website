@@ -32,6 +32,7 @@ export default {
 <style scoped lang="scss">
 @import '../../sass/variables.scss';
 @import '../../sass/animations.scss';
+@import '../../sass/mixins.scss';
 
 .headerBox {
  background: $greyDark;
@@ -51,45 +52,73 @@ export default {
   animation-fill-mode: forwards;
 
   &--1 {
-    font-size: 12rem;
+    font-size: 15rem;
     position: fixed;
     bottom: 0;
     left: 2rem;
     color: $white;
-    animation-delay: .2s;
+    animation-delay: .4s;
+
+      @include responsive(phone) {
+        font-size: 6rem;
+      }
   }
 
   &--2 {
-    font-size: 8rem;
+    font-size: 11.5rem;
     position: fixed;
-    bottom: 12rem;
+    bottom: 13rem;
     left: 2rem;
-    animation-delay: .4s;
+    animation-delay: .6s;
+
+      @include responsive(phone) {
+        font-size: 4.5rem;
+        bottom: 6rem;
+        
+        
+    }
   }
 
   &--3 {
-    font-size: 6rem;
+    font-size: 8rem;
     position: fixed;
-    bottom: 20rem;
+    bottom: 24rem;
     left: 2rem;
     color: $white;
-    animation-delay: .6s;
+    animation-delay: .8s;
+
+    @include responsive(phone) {
+        font-size: 3rem;
+        bottom: 11rem;
+    }
   }
 
     &--4 {
-    font-size: 6rem;
+    font-size: 8rem;
     position: fixed;
-    bottom: 20rem;
-    left: 12rem;
-    animation-delay: .8s;
+    bottom: 24rem;
+    left: 15rem;
+    animation-delay: 1s;
+
+    @include responsive(phone) {
+      font-size: 3rem;
+      bottom: 11rem;
+      left: 7rem;
+    }
   }
 
     &--5 {
-    font-size: 3.2rem;
+    font-size: 5rem;
     position: fixed;
-    bottom: 26rem;
+    bottom: 31.5rem;
     left: 2rem;
-    animation-delay: 1s;
+    animation-delay: 1.2s;
+
+    @include responsive(phone) {
+      font-size: 2rem;
+      bottom: 14.5rem;
+      
+    }
   }
 
 

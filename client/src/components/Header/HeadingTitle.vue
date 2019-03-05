@@ -1,7 +1,7 @@
 <template>
   <div>
-        <h1 class="mainH1 mainH1--1">Victor 
-          <span class="mainH1--2">Persson</span>
+        <h1 class="mainH1 mainH1--1">Welcome 
+          <span class="mainH1--2">to my own handly crafed page</span>
         </h1>
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
 <style scoped lang="scss">
 @import '../../sass/variables.scss';
 @import '../../sass/animations.scss';
+@import '../../sass/mixins.scss';
 
 
 .mainH1 {
@@ -37,12 +38,13 @@ export default {
   animation: slide-in-top .8s;
 
   &--1 {
-    font-size: 6rem;
+    font-size: 10rem;
   }
 
   &--2 {
-    font-size: 6rem;
+    font-size: 5vw;
     color: $greyLight;
+    display: block;
   }
 }
 

@@ -9,7 +9,6 @@
 <script>
 import DownButton from './DownButton.vue'
 import HeadingTitle from './HeadingTitle.vue'
-import HeadingText from './HeadingText.vue'
 
 export default {
   data() {
@@ -19,7 +18,6 @@ export default {
   
   components: {
     HeadingTitle,
-    HeadingText,
     DownButton,
   }
   
