@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-flex xs12>
           <ul class="footerList">
-              <li class="footerList--item">GitHub</li>
+              <li class="footerList--item">  <a href=""></a> GitHub</li>
               <li class="footerList--item">Facebook</li>
               <li class="footerList--item">LinkedIn</li>
               <li class="footerList--item">Instagram</li>
@@ -40,7 +40,11 @@ export default {
         float: left;
         margin-left: 1.5rem;
     }
+
+    
 }
+
+
 
 
 

@@ -1,15 +1,11 @@
 <template>
-  <v-container fluid grid-list-sm class="section1Box">
-    <v-layout row wrap>
-      <v-flex d-flex xs12 sm12>
+  <div class="section1Box">
         <p class="headerText">
             My name is Victor Persson, I'm a 23-year-old information architecture student Malmö University.
             History buff and tech-lover, front-end in general and web development in particular. I have proficient knowledge of HTML, CSS and SASS. Intermediate knowledge of Python and JavaScript.
             If you are interested in a website of your own, or if you simply have a question or two, don't hesitate to contact me!
          </p>
-      </v-flex>
-    </v-layout>
-  </v-container>
+      </div>
 </template>
 
 

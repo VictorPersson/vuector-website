@@ -1,6 +1,6 @@
 <template>
     <div class="logoBox">
-        <img class="logoBox--image" src="../../assets/beta_logo.png" alt="">
+        <img class="logoBox--image" src="../../assets/green.png" alt="">
     </div>
 </template>
 

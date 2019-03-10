@@ -13,7 +13,7 @@ import SplashScreen from './components/SplashScreen/SplashScreen.vue'
 import Header from './components/Header/Header.vue'
 import Navigation from './components/Navigation/Navigation.vue'
 import Footer from './components/Footer/Footer.vue'
-import Section1 from './components/Section1/Section1Text.vue'
+import Section1 from './components/Section1/Section1.vue'
 
 export default {
     data() {
