@@ -1,5 +1,10 @@
 <template>
     <div class="menuBox">
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+        <li>About me</li>
+      </ul>
     </div>
 </template>
 
@@ -21,6 +26,9 @@ export default {
 <style scoped lang="scss">
 @import '../../sass/variables.scss';
 
-
+.menuBox {
+  background-color: $greyLight;
+  height: 100vh;
+}
 
 </style>

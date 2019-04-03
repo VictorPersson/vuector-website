@@ -43,7 +43,7 @@ export default {
 }
 
 .headerText {
-  font-family: $fontTest1;
+  font-family: $fontHeader;
   color: $greenMedium;
   text-transform: uppercase;
   font-weight: 800;

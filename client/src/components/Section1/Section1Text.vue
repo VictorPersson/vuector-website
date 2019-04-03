@@ -5,7 +5,8 @@
             History buff and tech-lover, front-end in general and web development in particular. I have proficient knowledge of HTML, CSS and SASS. Intermediate knowledge of Python and JavaScript.
             If you are interested in a website of your own, or if you simply have a question or two, don't hesitate to contact me!
          </p>
-      </div>
+  </div>
+
 </template>
 
 
@@ -21,7 +22,6 @@ export default {
   methods: {
       
   },
-
 };
 
 </script>
@@ -33,12 +33,13 @@ export default {
 .headerText {
     font-family: $fontMain;
     font-size: 2rem;
-    
 }
 
 .section1Box {
     height: 100vh;
 }
+
+
 
 
 </style>

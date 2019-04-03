@@ -1,14 +1,14 @@
 <template>
     <div>
         <div class="menuBackground"></div>
-        <a href="#" @click="toggleMenu" 
+        <button @click="toggleMenu" 
             v-bind:class="{
                 iconActive: isIconActive == true
                 }" class="menuBox">
             <span class="menuBar menuBar--1"></span>
             <span class="menuBar menuBar--2"></span>
             <span class="menuBar menuBar--3"></span>
-        </a>
+        </button>
     </div>
 </template>
 
@@ -18,13 +18,13 @@ export default {
   data() {
     return {
         isIconActive: false,
-        isMenuActive: false
     }
   },
 
   methods: {
       toggleMenu: function() {
           this.isIconActive = !this.isIconActive
+          this.$emit('navIconClicked');
       },
   }
 };

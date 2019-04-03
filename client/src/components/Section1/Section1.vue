@@ -18,7 +18,6 @@ import Section1Image from'./Section1Image'
 export default {
   data() {
     return {
-      show: false
     }
   },
 
@@ -33,7 +32,7 @@ export default {
 @import '../../sass/variables.scss';
 
 .section1Box {
-    background-color: $greenDark;
+
 }
 
 

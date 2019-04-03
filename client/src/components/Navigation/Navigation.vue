@@ -1,8 +1,8 @@
 <template>
     <div>
-        <navigation-list />
+        <navigation-list v-if="showMenu"/>
         <navigation-logo />
-        <navigation-menu-icon />
+        <navigation-menu-icon v-on:navIconClicked='toggleMenu()' />
     </div>
 </template>
 
@@ -14,9 +14,16 @@ import NavigationList from'./NavigationList'
 export default {
   data() {
     return {
-      show: false
+      showMenu: false
     }
   },
+
+  methods: {
+    toggleMenu: function() {
+      this.showMenu = !this.showMenu
+    }
+  },
+
 
   components:{
       NavigationLogo,

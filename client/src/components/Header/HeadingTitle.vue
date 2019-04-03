@@ -31,19 +31,19 @@ export default {
 
 .mainH1 {
   text-align: center;
-  font-family: $fontTest1;
+  font-family: $fontHeader;
   color: $greenMedium;
   text-transform: uppercase;
   font-weight: 800;
   animation: slide-in-top .8s;
 
   &--1 {
-    font-size: 10rem;
+    font-size: 10vw;
   }
 
   &--2 {
     font-size: 5vw;
-    color: $greyLight;
+    color: $greyMedium;
     display: block;
   }
 }

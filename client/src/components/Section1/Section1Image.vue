@@ -30,7 +30,17 @@ export default {
 
     &--image  {
       //border-radius: 50%;
-      width: 22rem;
+          width: 22rem;
+          background-color: $greenDark;
+          background-size: cover;
+          background-position: -100px 0;
+          background-repeat: no-repeat;
+          -webkit-clip-path: ellipse(90% 70% at 0% 50%);
+          clip-path: ellipse(90% 70% at 0% 50%);
+          -webkit-shape-outside: ellipse(90% 70% at 0% 50%);
+          shape-outside: ellipse(90% 70% at 0% 50%);
+          -webkit-shape-margin: 2em;
+          shape-margin: 2em;
 
     }
     
