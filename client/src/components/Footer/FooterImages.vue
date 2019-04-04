@@ -2,12 +2,15 @@
     <div class="footerImages">
         <div class="footerImages__1">
             <i class="fab fa-vuejs footerImages__icons"></i>
+            <!-- <p class="footerImages__text">Vue.js</p> -->
         </div>
         <div class="footerImages__2">
             <i class="fab fa-sass footerImages__icons"></i>
+            <!-- <p class="footerImages__text">Syntactically Awesome Stylesheets Sass</p> -->
         </div>
         <div class="footerImages__3">
             <i class="fas fa-brain footerImages__icons"></i>
+            <!-- <p class="footerImages__text">Devine intellect</p> -->
         </div>
     </div>
 </template>
@@ -41,16 +44,23 @@ export default {
        text-align: center;
        padding-left: 35rem;
     }
+
+  &__text {
+      position: absolute;
+      color: $white;
+        text-align: center;
+       padding-left: 35rem;
+  }  
   
   &__icons {
     position: absolute;
     color: $white;
     font-size: 7rem;
     transition: all .5s;
-    
 
     &:hover {
-        font-size: 9rem;
+        transform: translateY(-2rem);
+
     }
   }
  }

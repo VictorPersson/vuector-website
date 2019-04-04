@@ -2,12 +2,14 @@
   <div class="footerBox">
     <footer-links />
     <footer-images />
+    <footer-text />
   </div>
 </template>
 
 <script>
 import FooterLinks from './FooterLinks.vue'
 import FooterImages from './FooterImages.vue'
+import FooterText from './FooterText.vue'
 
 export default {
   data() {
@@ -18,7 +20,8 @@ export default {
   
   components: {
     FooterLinks,
-    FooterImages
+    FooterImages,
+    FooterText
   }
 };
 </script>
