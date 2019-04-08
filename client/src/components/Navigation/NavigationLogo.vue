@@ -1,7 +1,6 @@
 <template>
     <div class="logoBox">
         <img class="logoBox--image" src="../../assets/green.png" alt="">
-        <h1 class="logoBox--header logoBox--h1">Victor Persson</h1>
     </div>
 </template>
 

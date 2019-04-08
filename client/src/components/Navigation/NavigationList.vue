@@ -27,7 +27,7 @@ export default {
 @import '../../sass/variables.scss';
 
 .menuBox {
-  background-color: $greyLight;
+  background-color: $greyMedium;
   height: 100vh;
 }
 

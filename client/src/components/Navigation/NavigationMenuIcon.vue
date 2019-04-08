@@ -45,6 +45,7 @@ export default {
     top: 2rem;
     right: 2rem;
     animation: slide-in-right 2s;
+    outline: none;
 
 
 .menuBar {
@@ -89,7 +90,7 @@ export default {
     &.iconActive {
 
         .menuBar--1 {
-            transform: translateY(.4rem) translateX(0) rotate(45deg);
+            transform: translateY(.5rem) translateX(0) rotate(45deg);
             width: 2.6rem
         }
         .menuBar--2 {

@@ -21,9 +21,9 @@ export default {
   methods: {
     toggleMenu: function() {
       this.showMenu = !this.showMenu
+      this.$emit('navMenuActive');
     }
   },
-
 
   components:{
       NavigationLogo,

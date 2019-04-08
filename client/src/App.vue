@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <SplashScreen v-if="splashScreenShow"/>
-    <Navigation v-if="splashScreenHidden"/>
-    <Header v-if="splashScreenHidden"/>
-    <Section1 v-if="splashScreenHidden"/>
-    <Footer v-if="splashScreenHidden"/>
+    <Navigation v-on:navMenuActive="menuActive()" v-if="splashScreenHidden"/>
+    <Header v-if="splashScreenHidden && !navMenuActive"/>
+    <Section1 v-if="splashScreenHidden && !navMenuActive" />
+    <Footer v-if="splashScreenHidden && !navMenuActive"/>
   </div>
 </template>
 
@@ -19,7 +19,8 @@ export default {
     data() {
     return {
       splashScreenShow: true,
-      splashScreenHidden: false
+      splashScreenHidden: false,
+      navMenuActive: null
     }
   },
 
@@ -40,6 +41,10 @@ export default {
         this.splashScreenHidden = true;
         console.log("Splash done")
       }, 1700*2);
+    },
+
+    menuActive: function() {
+      this.navMenuActive = !this.navMenuActive
     }
   },
 
