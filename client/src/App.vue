@@ -5,6 +5,7 @@
     <Header v-if="splashScreenHidden && !navMenuActive"/>
     <Section1 v-if="splashScreenHidden && !navMenuActive" />
     <Footer v-if="splashScreenHidden && !navMenuActive"/>
+    <router-view></router-view>
   </div>
 </template>
 
