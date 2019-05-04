@@ -1,19 +1,17 @@
 <template>
-  <v-container fluid grid-list-sm >
-    <v-layout row class="section1Box">
-      <v-flex v-flex grow pa-1>
+  <div class="section1">
+    <div class="sectionContainer">
           <section-1-image />
-      </v-flex>
-      <v-flex v-flex shrink pa-1>
           <section-1-text />
-      </v-flex>
-    </v-layout>
-  </v-container>
+    </div>
+          <section-1-icons />
+  </div>
 </template>
 
 <script>
 import Section1Text from'./Section1Text'
 import Section1Image from'./Section1Image'
+import Section1Icons from'./Section1Icons'
 
 export default {
   data() {
@@ -23,7 +21,8 @@ export default {
 
   components:{
       Section1Text,
-      Section1Image
+      Section1Image,
+      Section1Icons
   },
 };
 </script>
@@ -31,9 +30,20 @@ export default {
 <style lang="scss">
 @import '../../sass/variables.scss';
 
-.section1Box {
-
+.section1 {
+  height: auto;
 }
 
+.sectionContainer {
+  display: flex;
+}
 
+@media screen and (max-width: 480px) {
+  .sectionContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  }
+}
 </style>

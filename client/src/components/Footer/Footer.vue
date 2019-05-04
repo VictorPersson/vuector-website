@@ -30,7 +30,7 @@ export default {
 @import '../../sass/variables.scss';
 
 .footerBox {
-  height: 65vh;
+  height: auto;
   max-width: 100%;
   background: linear-gradient($greenLight, $greenDark);
 }

@@ -1,24 +1,34 @@
 <template>
-  <v-container grid-list-md text-xs-center>
-    <v-layout row wrap>
-      <v-flex xs12>
-        <div class="footerLinks">
-          <a class="footerLinks__effect footerLinks__text" href="https://github.com/VictorPersson" target="_blank">
-            <span class="footer-links__span">GitHub</span>
-          </a>
-          <a class="footerLinks__effect footerLinks__text" href="https://www.linkedin.com/in/victor-persson-755952171/" target="_blank">
-            <span class="footer-links__span">LiknedIN</span>
-          </a>
-          <a class="footerLinks__effect footerLinks__text" href="https://www.facebook.com/victor.persson.3" target="_blank">
-            <span class="footer-links__span">Facebook</span>
-          </a>
-          <a class="footerLinks__effect footerLinks__text" href="https://www.instagram.com/victorperzzon/" target="_blank">
-            <span class="footer-links__span">Instagram</span>
-          </a>
-        </div>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <div class="footerLinks">
+    <a
+      class="footerLinks__effect footerLinks__text"
+      href="https://github.com/VictorPersson"
+      target="_blank"
+    >
+      <span class="footer-links__span">GitHub</span>
+    </a>
+    <a
+      class="footerLinks__effect footerLinks__text"
+      href="https://www.linkedin.com/in/victor-persson-755952171/"
+      target="_blank"
+    >
+      <span class="footer-links__span">LiknedIN</span>
+    </a>
+    <a
+      class="footerLinks__effect footerLinks__text"
+      href="https://www.facebook.com/victor.persson.3"
+      target="_blank"
+    >
+      <span class="footer-links__span">Facebook</span>
+    </a>
+    <a
+      class="footerLinks__effect footerLinks__text"
+      href="https://www.instagram.com/victorperzzon/"
+      target="_blank"
+    >
+      <span class="footer-links__span">Instagram</span>
+    </a>
+  </div>
 </template>
 
 <script>
@@ -29,14 +39,14 @@ export default {};
 @import "../../sass/variables.scss";
 
 .footerLinks {
-  line-height: 14px;
-  margin-top: 6.5rem;
-  
+  padding-top: 3rem;
+  line-height: 0.5rem;
+  display: flex;
+  justify-content: center;
 
   &__text {
-    text-align: center;
     font-size: 2.5rem;
-    margin-right: 1rem;
+    margin-right: 2.5rem;
     font-family: $fontHeader;
     text-transform: uppercase;
   }
@@ -46,7 +56,7 @@ export default {};
     position: relative;
     color: $white;
     text-decoration: none;
-    line-height: 24px;
+    line-height: 2rem;
     &:before,
     &:after {
       content: "";
@@ -75,7 +85,7 @@ export default {};
 
     > .footer-links__span {
       display: block;
-      padding: .8rem;
+      padding: 0.8rem;
       &:before,
       &:after {
         left: 0;
@@ -98,5 +108,19 @@ export default {};
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .footerLinks {
+    flex-direction: column;
+    text-align: center;
+
+    &__text {
+          margin-right: 0;
+          padding-bottom: .9rem;
+    }
+  }
+
+
+ }
 </style>
 

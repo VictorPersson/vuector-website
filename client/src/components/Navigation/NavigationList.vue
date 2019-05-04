@@ -1,32 +1,38 @@
 <template>
-    <div class="menuBox">
-      <ul class="list">
-        <router-link to="/contact" tag="li" active-class="active" class="list"><a class="list__items">Contact</a> </router-link>
-        <router-link to="/contact" tag="li" active-class="active" class="list"><a class="list__items">Contact</a> </router-link>
-        <router-link to="/contact" tag="li" active-class="active" class="list"><a class="list__items">Contact</a> </router-link>
-        <router-link to="/contact" tag="li" active-class="active" class="list"><a class="list__items">Contact</a> </router-link>
-      </ul>
-    </div>
+  <div class="menuBox">
+    <ul class="list">
+      <router-link @click="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
+        <a class="list__items">TBA...</a>
+      </router-link>
+      <router-link to="/contact" tag="li" active-class="active" class="list">
+        <a class="list__items">TBA...</a>
+      </router-link>
+      <router-link to="/contact" tag="li" active-class="active" class="list">
+        <a class="list__items">TBA...</a>
+      </router-link>
+      <router-link to="/contact" tag="li" active-class="active" class="list">
+        <a class="list__items">TBA...</a>
+      </router-link>
+    </ul>
+  </div>
 </template>
 
 <script>
-
 export default {
-
   data() {
-    return {
-    }
+    return {};
   },
 
   methods: {
-      
+    toggleMenu: function() {
+      console.log("Close menu")
+    }
   }
 };
-
 </script>
 
 <style scoped lang="scss">
-@import '../../sass/variables.scss';
+@import "../../sass/variables.scss";
 
 .menuBox {
   background-color: $greyMedium;
@@ -34,21 +40,21 @@ export default {
 }
 
 .list {
-    list-style: none;
-    text-align: center;
+  list-style: none;
+  text-align: center;
+  padding-top: 3rem;
 
   &__items {
-      color: $white;
-      text-decoration: none;
-      font-size: 4rem;
-      font-family: $fontHeader;
-      text-transform: uppercase;
-      transition: all .5s;
+    color: $white;
+    text-decoration: none;
+    font-size: 6rem;
+    font-family: $fontHeader;
+    text-transform: uppercase;
+    transition: all 0.5s;
 
-      &:hover {
-        color: $greenLight;
-      }
+    &:hover {
+      color: $greenLight;
+    }
   }
 }
-
 </style>

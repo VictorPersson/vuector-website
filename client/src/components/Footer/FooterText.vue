@@ -20,13 +20,13 @@ export default {
     &__para {
         color: $white;
         text-align: center;
-        margin-top: 18rem;
         font-family: $fontMain;
         text-transform: lowercase;
         font-size: 1.3rem;
         font-weight: 400;
-
-
+        margin-bottom: 0rem;
+        margin-top: 4rem;
+        padding-bottom: 1rem;
     }
 }
 
