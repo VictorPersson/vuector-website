@@ -2,7 +2,20 @@
   <div>
     <h1 class="mainH1 mainH1--1">
       Welcome
-      <span class="mainH1--2">to my own handly crafed page</span>
+      <p class="comma">,</p>
+      <span class="mainH1--2">to my own handcrafted page</span>
+      <span class="mainH1--3">
+        <a
+          href="https://github.com/VictorPersson/vuector-website/tree/master/client"
+          target="_blank"
+          class="betaText"
+        >live beta 1.0</a> - don't HESITATE to
+        <a
+          href="https://github.com/VictorPersson/vuector-website/issues"
+          target="_blank"
+          class="betaText"
+        >report any bugs</a> you might come across.
+      </span>
     </h1>
   </div>
 </template>
@@ -30,9 +43,9 @@ export default {
   color: $greenMedium;
   text-transform: uppercase;
   font-weight: 800;
-  animation: slide-in-top 0.8s;
 
   &--1 {
+    animation: slide-in-top 0.8s;
     font-size: 10vw;
   }
 
@@ -41,6 +54,22 @@ export default {
     color: $greyMedium;
     display: block;
   }
+
+  &--3 {
+    font-size: 2rem;
+    font-family: $fontHeader;
+    color: $greyMedium;
+    display: block;
+  }
+}
+
+.comma {
+  display: inline-block;
+  color: $greyMedium;
+}
+
+.betaText {
+  color: $greenMedium;
 }
 
 @media screen and (max-width: 480px) {
@@ -52,8 +81,13 @@ export default {
     }
 
     &--2 {
-      font-size: 1.7rem;
+      font-size: 2.2rem;
     }
+
+    &--3 {
+      font-size: 1.5rem;
+      margin: 0rem 3rem 0rem 0rem;
+  }
   }
 }
 </style>

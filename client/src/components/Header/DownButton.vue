@@ -33,7 +33,7 @@ export default {
 
     scrollDown() {
       window.scrollBy({
-        top: 500,
+        top: 650,
         left: 0,
         behavior: "smooth"
       });

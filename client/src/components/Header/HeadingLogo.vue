@@ -32,9 +32,9 @@ export default {
   .logoBox {
 
     &--image {
-      margin-top: 10rem;
+      margin-top: 14.2rem;
       width: 27rem;
-      margin-left: 3vw;
+      margin-left: 1.5vw;
       opacity: 0.2;
       filter: alpha(opacity=50);
     }

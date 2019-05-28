@@ -1,7 +1,8 @@
 <template>
   <div class="menuBox">
+    <h3 class="navHeader">More pages coming soon...</h3>
     <ul class="list">
-      <router-link @click="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
+      <router-link to="/contact" tag="li" active-class="active" class="list">
         <a class="list__items">TBA...</a>
       </router-link>
       <router-link to="/contact" tag="li" active-class="active" class="list">
@@ -24,9 +25,6 @@ export default {
   },
 
   methods: {
-    toggleMenu: function() {
-      console.log("Close menu")
-    }
   }
 };
 </script>
@@ -36,8 +34,15 @@ export default {
 
 .menuBox {
   background-color: $greyMedium;
-  height: 100vh;
+  min-height: 100vh;
 }
+
+.navHeader {
+    font-size: 4rem;
+    font-family: $fontHeader;
+    color: $greenMedium;
+    text-align: center;
+  }
 
 .list {
   list-style: none;

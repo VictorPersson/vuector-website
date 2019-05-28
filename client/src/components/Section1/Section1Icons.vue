@@ -1,6 +1,6 @@
 <template>
   <div class="section1Icons">
-      <h3 class="section1Icons--header">Things I love</h3>
+      <h3 class="section1Icons--header">Things I hate to love</h3>
       <div class="section1Icons--positive">
         <i class="fas fa-graduation-cap"></i>
         <i class="fas fa-code"></i>
