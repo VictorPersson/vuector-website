@@ -23,7 +23,7 @@ export default {
   &--image {
     border-radius: 15%;
     width: 18rem;
-    margin-left: 3rem;
+    margin-left: 20rem;
   }
 }
 

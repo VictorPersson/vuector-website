@@ -47,6 +47,9 @@ export default {
     animation: slide-in-right 2s;
     outline: none;
 
+.menuBarActive {
+    background: $redDark !important;
+}
 
 .menuBar {
     left: 0;

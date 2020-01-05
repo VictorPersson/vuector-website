@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <SplashScreen v-if="splashScreenShow"/>
-    <Header v-if="splashScreenHidden && !navMenuActive"/>
+    <Header v-show="splashScreenHidden"/>
     <Navigation v-on:navMenuActive="menuActive()" v-if="splashScreenHidden"/>
-    <Section1 v-if="splashScreenHidden && !navMenuActive" />
-    <Footer v-if="splashScreenHidden && !navMenuActive"/>
+    <Section1 v-show="splashScreenHidden" />
+    <Footer v-show="splashScreenHidden"/>
     <router-view></router-view>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default {
       setTimeout(() => {
         this.splashScreenShow = false;
         this.splashScreenHidden = true;
-      }, 1700*2);
+      }, 1700 * 2);
     },
 
     menuActive: function() {

@@ -1,9 +1,7 @@
 <template>
   <div class="section1Box">
-    <h3 class="section1Header">About</h3>
     <p class="headerText">
-      My name is Victor Persson, I'm a 23-year-old information architecture student Malmö University.
-      History buff and tech-lover, front-end in general and web development in particular.
+      
     </p>
   </div>
 </template>
@@ -23,17 +21,19 @@ export default {
 @import "../../sass/variables.scss";
 @import "../../sass/animations.scss";
 
-.section1Header {
-  font-size: 5vw;
-  color: $greyMedium;
-  font-family: $fontHeader;
-  margin-left: 2rem;
+.section1Box {
+  display: flex;
+  justify-content: center;
+
 }
 
+
 .headerText {
+  justify-content: center;
   font-family: $fontMain;
   font-size: 2rem;
-  margin: 0rem 10rem 4rem 2rem;
+  margin: 0rem 40rem 4rem 2rem;
+  margin-top: 10rem;
 }
 
 @media screen and (max-width: 480px) {

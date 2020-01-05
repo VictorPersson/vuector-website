@@ -1,7 +1,12 @@
 <template>
   <div class="logoBox">
-    <img class="logoBox--image" src="../../assets/green.png" alt>
+    <!--<img class="logoBox--image" src="../../assets/green.png" alt> -->
+    <!-- <img src="../../assets/Flat-Mountains.svg" alt=""> -->
+    <div class="test1"></div>
+    <div class="test2"></div>
+    
   </div>
+  
 </template>
 
 <script>
@@ -18,26 +23,38 @@ export default {
 @import "../../sass/variables.scss";
 @import "../../sass/animations.scss";
 
-.logoBox {
-  &--image {
-    width: 63rem;
-    margin-left: 40vw;
-    opacity: 0.2;
-    filter: alpha(opacity=50);
-  }
+
+svg {
+  transform: rotate(180deg);
+  color: black;
 }
+
+.test1 {
+  height: 110vh;
+  background-color: $greenMedium;
+  clip-path: polygon(10% 0, 50% 50%, 0 100%, 0 0);
+  transform: rotate(1deg);
+  margin-left: -5rem;
+  position: absolute;
+  width: 100%;
+  
+}
+
+.test2 {
+  margin-left: -5rem;
+  height: 120vh;
+  background-color: $greenLight;
+  clip-path: polygon(10% 0, 50% 50%, 0 100%, 0 0);
+  transform: rotate(2deg);
+  opacity: .5;
+}
+
+.logoBox {
+    position: relative;
+}
+
 
 @media screen and (max-width: 480px) {
 
-  .logoBox {
-
-    &--image {
-      margin-top: 14.2rem;
-      width: 27rem;
-      margin-left: 1.5vw;
-      opacity: 0.2;
-      filter: alpha(opacity=50);
-    }
-  }
 }
 </style>

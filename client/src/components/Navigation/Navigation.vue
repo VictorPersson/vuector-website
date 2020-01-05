@@ -1,6 +1,6 @@
 <template>
     <div>
-        <navigation-list v-if="showMenu"/>
+        <navigation-list v-show="showMenu"/>
         <navigation-menu-icon v-on:navIconClicked='toggleMenu()' />
     </div>
 </template>

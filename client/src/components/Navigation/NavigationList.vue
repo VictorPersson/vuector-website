@@ -3,13 +3,13 @@
     <h3 class="navHeader">More pages coming soon...</h3>
     <ul class="list">
       <router-link to="/contact" tag="li" active-class="active" class="list">
-        <a class="list__items">TBA...</a>
+        <a class="list__items">Home</a>
       </router-link>
       <router-link to="/contact" tag="li" active-class="active" class="list">
-        <a class="list__items">TBA...</a>
+        <a class="list__items">About</a>
       </router-link>
       <router-link to="/contact" tag="li" active-class="active" class="list">
-        <a class="list__items">TBA...</a>
+        <a class="list__items">Projects</a>
       </router-link>
       <router-link to="/contact" tag="li" active-class="active" class="list">
         <a class="list__items">TBA...</a>
@@ -31,10 +31,12 @@ export default {
 
 <style scoped lang="scss">
 @import "../../sass/variables.scss";
+@import "../../sass/animations.scss";
 
 .menuBox {
   background-color: $greyMedium;
   min-height: 100vh;
+  position: relative;
 }
 
 .navHeader {
@@ -59,6 +61,7 @@ export default {
 
     &:hover {
       color: $greenLight;
+      animation: transistion-top 0.8s;
     }
   }
 }

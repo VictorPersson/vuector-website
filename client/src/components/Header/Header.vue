@@ -2,6 +2,7 @@
   <div class="headerBox">
       <heading-title />
       <heading-logo />
+      <heading-text />
       <down-button />
   </div>
 </template>
@@ -10,6 +11,7 @@
 import DownButton from './DownButton.vue'
 import HeadingTitle from './HeadingTitle.vue'
 import HeadingLogo from './HeadingLogo.vue'
+import HeadingText from './HeadingText.vue'
 
 export default {
   data() {
@@ -20,7 +22,8 @@ export default {
   components: {
     HeadingTitle,
     DownButton,
-    HeadingLogo
+    HeadingLogo,
+    HeadingText
   }
   
 };
