@@ -37,7 +37,7 @@ export default {
 
 
 .menuBox {
-    z-index: 10;
+    z-index: 11;
     height: 3rem;
     width: 3rem;
     position: fixed;
@@ -92,16 +92,33 @@ export default {
 
     &.iconActive {
 
+        &:hover {
+            .menuBar--1 {
+                background-color: $redLight; 
+            }
+
+            .menuBar--3 {
+                background-color: $redLight; 
+            }
+        }
+
+        
+
         .menuBar--1 {
             transform: translateY(.5rem) translateX(0) rotate(45deg);
-            width: 2.6rem
+            width: 2.6rem;
+            background-color: $greenDark;  
+        
         }
         .menuBar--2 {
             transform: translateX(10rem);
         }
+        
         .menuBar--3 {
             transform: translateY(-1rem) translateX(0) rotate(-45deg);
             width: 2.6rem;
+            background-color: $greenDark;
+ 
         }
     }
 }

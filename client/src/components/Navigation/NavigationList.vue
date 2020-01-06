@@ -1,6 +1,6 @@
 <template>
   <div class="menuBox">
-    <h3 class="navHeader">More pages coming soon...</h3>
+    <!--<h3 class="navHeader">More pages coming soon...</h3> -->
     <ul class="list">
       <router-link to="/contact" tag="li" active-class="active" class="list">
         <a class="list__items">Home</a>
@@ -12,7 +12,7 @@
         <a class="list__items">Projects</a>
       </router-link>
       <router-link to="/contact" tag="li" active-class="active" class="list">
-        <a class="list__items">TBA...</a>
+        <a class="list__items">Wishlist</a>
       </router-link>
     </ul>
   </div>
@@ -34,9 +34,13 @@ export default {
 @import "../../sass/animations.scss";
 
 .menuBox {
+  z-index: 10;
   background-color: $greyMedium;
   min-height: 100vh;
-  position: relative;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .navHeader {
