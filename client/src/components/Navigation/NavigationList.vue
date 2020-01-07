@@ -1,20 +1,24 @@
 <template>
   <div class="menuBox">
+    <div class="menuSplash-1">
+      <div class="menuSplash-2">
     <!--<h3 class="navHeader">More pages coming soon...</h3> -->
-    <ul class="list">
-      <router-link @click.native="toggleMenu" to="/" tag="li" active-class="active" class="list">
-        <a  class="list__items">Home</a>
-      </router-link>
-      <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
-        <a class="list__items">About</a>
-      </router-link>
-      <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
-        <a class="list__items">Projects</a>
-      </router-link>
-      <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
-        <a class="list__items">Wishlist</a>
-      </router-link>
-    </ul>
+     <ul class="list">
+        <router-link @click.native="toggleMenu" to="/" tag="li" active-class="active" class="list">
+         <a class="list__items">Home</a>
+        </router-link>
+        <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
+          <a class="list__items">About</a>
+        </router-link>
+        <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
+          <a class="list__items">Projects</a>
+        </router-link>
+        <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
+          <a class="list__items">Wishlist</a>
+        </router-link>
+      </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -28,7 +32,6 @@ export default {
   methods: {
     toggleMenu: function() {
       this.$emit('menuOptionMade');
-      this.$root.$emit('iconActive', data)
     }
   }
 };
@@ -38,8 +41,22 @@ export default {
 @import "../../sass/variables.scss";
 @import "../../sass/animations.scss";
 
+
 .menuBox {
+  transition: ease-in;
+  animation: menu-slide .6s;
   z-index: 10;
+  background-color: $greyLight;
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.menuSplash-1 {
+  animation: menu-slide .8s;
+  transition: ease-in;
   background-color: $greyMedium;
   min-height: 100vh;
   width: 100%;
@@ -47,6 +64,18 @@ export default {
   top: 0;
   right: 0;
 }
+
+.menuSplash-2 {
+  animation: menu-slide 1s;
+  transition: ease-in;
+  background-color: $greyDark;
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
 
 .navHeader {
     font-size: 4rem;

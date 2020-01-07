@@ -54,7 +54,6 @@ export default {
 
     hideContent: function() {
       this.menuOptionActive = !this.menuOptionActive
-      console.log("Hding pages")
     }
 
 

@@ -23,9 +23,8 @@ export default {
 @import '../../sass/variables.scss';
 
 .contactBox {
-  height: 65vh;
+  min-height: 65vh;
   max-width: 100%;
-  background: linear-gradient($greenLight, $greenDark);
 }
 
 h1 {

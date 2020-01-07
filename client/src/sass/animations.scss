@@ -80,3 +80,13 @@
         transform: translateY(100vh);
     }
 }
+
+@keyframes menu-slide {
+    0% {
+        transform: translateX(100vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

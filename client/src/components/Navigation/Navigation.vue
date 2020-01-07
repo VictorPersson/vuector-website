@@ -1,7 +1,7 @@
 <template>
     <div>
         <navigation-list v-on:menuOptionMade='redirectPage()' v-show="showMenu"/>
-        <navigation-menu-icon v-on:navIconClicked='toggleMenu()' />
+        <navigation-menu-icon v-on:navIconClicked='toggleMenu()' v-if="isMenuOptionMade"/>
     </div>
 </template>
 
@@ -12,12 +12,13 @@ import NavigationList from'./NavigationList'
 export default {
   data() {
     return {
-      showMenu: false
-      
+      showMenu: false,
+      isMenuOptionMade: true
     }
   },
 
   methods: {
+
     toggleMenu: function() {
       this.showMenu = !this.showMenu
       this.$emit('navMenuActive');
@@ -25,6 +26,12 @@ export default {
 
     redirectPage: function() {
       this.showMenu = !this.showMenu
+      this.isMenuOptionMade = false
+      
+      this.$nextTick(() => {
+        this.isMenuOptionMade = true
+      });
+      
       this.$emit('menuOptionActive');
     }
   },
@@ -38,6 +45,5 @@ export default {
 
 <style lang="scss">
 @import '../../sass/variables.scss';
-
 
 </style>
