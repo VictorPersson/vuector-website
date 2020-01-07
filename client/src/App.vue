@@ -1,11 +1,15 @@
 <template>
   <div id="app">
     <SplashScreen v-if="splashScreenShow"/>
-    <Header v-show="splashScreenHidden"/>
-    <Navigation v-on:navMenuActive="menuActive()" v-if="splashScreenHidden"/>
-    <Section1 v-show="splashScreenHidden" />
-    <Footer v-show="splashScreenHidden"/>
     <router-view></router-view>
+    <Header v-show="splashScreenHidden && menuOptionActive"/>
+    <Navigation 
+                v-on:menuOptionActive="hideContent()"
+                v-on:navMenuActive="menuActive()" 
+                v-if="splashScreenHidden"
+                />
+    <Section1 v-show="splashScreenHidden && menuOptionActive" />
+    <Footer v-show="splashScreenHidden"/>
   </div>
 </template>
 
@@ -21,7 +25,8 @@ export default {
     return {
       splashScreenShow: true,
       splashScreenHidden: false,
-      navMenuActive: null
+      navMenuActive: null,
+      menuOptionActive: true
     }
   },
 
@@ -45,7 +50,14 @@ export default {
 
     menuActive: function() {
       this.navMenuActive = !this.navMenuActive
+    },
+
+    hideContent: function() {
+      this.menuOptionActive = !this.menuOptionActive
+      console.log("Hding pages")
     }
+
+
   },
 
   created() {

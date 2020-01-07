@@ -1,6 +1,6 @@
 <template>
     <div>
-        <navigation-list v-show="showMenu"/>
+        <navigation-list v-on:menuOptionMade='redirectPage()' v-show="showMenu"/>
         <navigation-menu-icon v-on:navIconClicked='toggleMenu()' />
     </div>
 </template>
@@ -13,6 +13,7 @@ export default {
   data() {
     return {
       showMenu: false
+      
     }
   },
 
@@ -20,6 +21,11 @@ export default {
     toggleMenu: function() {
       this.showMenu = !this.showMenu
       this.$emit('navMenuActive');
+    },
+
+    redirectPage: function() {
+      this.showMenu = !this.showMenu
+      this.$emit('menuOptionActive');
     }
   },
 

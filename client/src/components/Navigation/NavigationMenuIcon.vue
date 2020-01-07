@@ -26,6 +26,13 @@ export default {
           this.isIconActive = !this.isIconActive
           this.$emit('navIconClicked');
       },
+
+      mounted() {
+          this.$root.$on('eventing', data => {
+              this.isIconActive = !this.isIconActive
+              console.log("De sker nock")
+          })
+      }
   }
 };
 

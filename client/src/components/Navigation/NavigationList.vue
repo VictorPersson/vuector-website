@@ -2,16 +2,16 @@
   <div class="menuBox">
     <!--<h3 class="navHeader">More pages coming soon...</h3> -->
     <ul class="list">
-      <router-link to="/contact" tag="li" active-class="active" class="list">
-        <a class="list__items">Home</a>
+      <router-link @click.native="toggleMenu" to="/" tag="li" active-class="active" class="list">
+        <a  class="list__items">Home</a>
       </router-link>
-      <router-link to="/contact" tag="li" active-class="active" class="list">
+      <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
         <a class="list__items">About</a>
       </router-link>
-      <router-link to="/contact" tag="li" active-class="active" class="list">
+      <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
         <a class="list__items">Projects</a>
       </router-link>
-      <router-link to="/contact" tag="li" active-class="active" class="list">
+      <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
         <a class="list__items">Wishlist</a>
       </router-link>
     </ul>
@@ -21,10 +21,15 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+    };
   },
 
   methods: {
+    toggleMenu: function() {
+      this.$emit('menuOptionMade');
+      this.$root.$emit('iconActive', data)
+    }
   }
 };
 </script>
