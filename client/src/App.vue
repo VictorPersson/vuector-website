@@ -2,7 +2,7 @@
   <div id="app">
     <SplashScreen v-if="splashScreenShow"/>
     <router-view></router-view>
-    <Header v-show="splashScreenHidden && menuOptionActive"/>
+    <Header v-show="splashScreenHidden" v-if="!$route.meta.hideContent"/>
     <Navigation 
                 v-on:menuOptionActive="hideContent()"
                 v-on:navMenuActive="menuActive()" 

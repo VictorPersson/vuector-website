@@ -1,6 +1,10 @@
 <template>
   <div class="contactBox">
-      <h1>CONTACT ME</h1>
+      <span>Message Title</span>
+      <input v-model="title" placeholder="Title">
+
+      <span>Message Content</span>
+      <textarea v-model="message" placeholder="Content..."></textarea>
   </div>
 </template>
 

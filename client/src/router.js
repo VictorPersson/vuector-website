@@ -3,6 +3,6 @@ import LewParPink from "./components/Contact/LewParPink.vue"
 
 
 export const routes = [
-    { path: "/contact", component: Contact },
-    { path: "/asmrdarlinglew", component: LewParPink },
+    { name: "Contact", path: "/contact", component: Contact, meta: {hideContent: true} },
+    { name: "LewParPink", path: "/asmrdarlinglew", component: LewParPink, meta: {hideContent: true} },
 ];
