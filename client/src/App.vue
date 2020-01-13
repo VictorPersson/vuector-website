@@ -8,7 +8,7 @@
                 v-on:navMenuActive="menuActive()" 
                 v-if="splashScreenHidden"
                 />
-    <Section1 v-show="splashScreenHidden && menuOptionActive" />
+    <Section1 v-show="splashScreenHidden && menuOptionActive" v-if="!$route.meta.hideContent"/>
     <Footer v-show="splashScreenHidden"/>
   </div>
 </template>
