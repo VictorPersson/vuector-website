@@ -2,9 +2,6 @@
   <div class="logoBox">
     <!--<img class="logoBox--image" src="../../assets/green.png" alt> -->
     <!-- <img src="../../assets/Flat-Mountains.svg" alt=""> -->
-    <div class="beta">
-      <h1 class="betaText">BETA</h1>
-    </div>
     <div class="test1"></div>
     <div class="test2"></div>
     

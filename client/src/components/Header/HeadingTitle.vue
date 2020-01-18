@@ -5,7 +5,8 @@
     Victor
       
     <p class="comma">,</p>
-      <span class="mainH1--2">Web dev, design & UX</span>
+    
+    <span class="mainH1--2">Web dev, design & UX</span>
     
     </h1>
   </div>
@@ -77,7 +78,7 @@ export default {
     &--3 {
       font-size: 1.5rem;
       margin: 0rem 3rem 0rem 0rem;
-  }
+    }
   }
 }
 </style>

@@ -4,8 +4,14 @@
         <div class="countDownBox">
             <h2 class="countDownVariables"> 
                 {{ days }}<span class="variableText">days</span>
+            </h2>
+            <h2 class="countDownVariables">
                 {{ hours }}<span class="variableText">hours</span>
+            </h2>
+            <h2 class="countDownVariables">
                 {{ minutes }}<span class="variableText">minutes</span>
+            </h2>
+            <h2 class="countDownVariables">
                 {{ seconds }}<span class="variableText">seconds</span>
             </h2>
         </div>
@@ -54,8 +60,10 @@ export default {
 
 <style lang="scss">
 @import '../../sass/variables.scss';
+@import '../../sass/animations.scss';
 
 .wishListHeader {
+    animation: fall-down 1s;
     font-size: 8rem;
     margin-top: .2rem;
     text-align: center;
@@ -67,11 +75,12 @@ export default {
 .countDownBox {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    animation: fade-in 3s;
 }
 
 .countDownVariables {
     font-size: 6.5rem;
-    margin-right: 2.5rem;
     font-family: $fontHeader;
     text-transform: uppercase;
     color: $greenMedium;
@@ -84,4 +93,22 @@ export default {
     margin-right: 3rem;
 }
 
+
+@media screen and (max-width: 480px) {
+
+        .wishListHeader {
+            font-size: 4rem;   
+        }
+
+        .countDownBox {
+
+         }
+
+        .countDownVariables {
+            flex-direction: column;
+            font-size: 3rem;
+            margin: 0;
+            padding: 0;
+        }
+     }
 </style>
