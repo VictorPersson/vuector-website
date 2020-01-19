@@ -100,10 +100,6 @@ export default {
             font-size: 4rem;   
         }
 
-        .countDownBox {
-
-         }
-
         .countDownVariables {
             flex-direction: column;
             font-size: 3rem;

@@ -1,10 +1,11 @@
 <template>
     <div class="wishListListBox">
         <ul class="ul">
-            <li class="listItem">1 ett</li>
-            <li class="listItem">2 två</li>
-            <li class="listItem">3 två</li>
-            <li class="listItem">4 två</li>
+            <li class="listItem" @click="openLink" v-for="(item, index) in items" v-bind:key="item.id">
+                <h3 class="listItem--header"> {{ headerText }} {{index + 1}} </h3>
+                <p class="listItem--linkText"> {{ item.wish }} </p>
+                <a class="listItem--linkButton" v-bind:href="item.link" target="_blank">Link</a>
+            </li>
         </ul>
     </div>
 </template>
@@ -14,7 +15,17 @@
 export default {
     data() {
         return {
+            headerText: "Önsking",
+            items: [
+                { wish: "Mobil", link: "https://www.netonnet.se/art/telefoner/mobiltelefoner/iphone/apple-iphone-8-64gb-space-grey/247707.9044/?showSubscriptionModal=false&pTab=standard" },
+                { wish: "Tax", link: "https://www.skk.se/sv/kopahund/hundraser-valpkullar/tax/?show=breeders" },
+                { wish: "Skateboard", link: "https://www.boardlife.se/produkt-kategori/skateboard/complete-skateboards/?v=f003c44deab6" }            
+                ]
+        }
+    },
 
+    methods: {
+        openLink: function() {
 
         }
     }
@@ -23,7 +34,9 @@ export default {
 </script>
 
 <style lang="scss">
+
 @import '../../sass/variables.scss';
+@import '../../sass/animations.scss';
 
 
 .ul {
@@ -31,12 +44,12 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
     padding: 4rem;
-
 }
 
 .listItem {
-    font-style: $fontHeader;
-    padding: 5rem;
+    color: $greyMedium;
+    font-family: $fontMain;
+    padding: 3rem;
     font-size: 2rem;
     list-style: none;
     box-shadow: $boxShadow;
@@ -46,8 +59,32 @@ export default {
 
     &:hover {
          box-shadow: $boxShadowMoved;
-         transform: translateY(-2rem);
+         transform: translateY(-1rem);
+    }
 
+    &--header {
+        font-family: $fontHeader;
+    }
+
+    &--linkText {
+        margin-bottom: 3rem;
+        font-size: 3rem;
+    }
+    
+    &--linkButton {
+        color: white;
+        text-decoration: none;
+        background: $greenLight;
+        padding: 1rem;
+        border-radius: 1rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        transition: .4s;
+
+        &:hover {
+            background: $greyDark;
+            animation: fall-down;
+        }
     }
 }
 </style>
