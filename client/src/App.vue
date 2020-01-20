@@ -5,10 +5,9 @@
     <Header v-show="splashScreenHidden" v-if="!$route.meta.hideContent"/>
     <Navigation 
                 v-on:menuOptionActive="hideContent()"
-                v-on:navMenuActive="menuActive()" 
                 v-if="splashScreenHidden"
                 />
-    <Section1 v-show="splashScreenHidden && menuOptionActive" v-if="!$route.meta.hideContent"/>
+    <Section1 v-show="splashScreenHidden" v-if="!$route.meta.hideContent"/>
     <Footer v-show="splashScreenHidden"/>
   </div>
 </template>
@@ -25,7 +24,6 @@ export default {
     return {
       splashScreenShow: true,
       splashScreenHidden: false,
-      navMenuActive: null,
       menuOptionActive: true
     }
   },
@@ -46,10 +44,6 @@ export default {
         this.splashScreenShow = false;
         this.splashScreenHidden = true;
       }, 1700 * 2);
-    },
-
-    menuActive: function() {
-      this.navMenuActive = !this.navMenuActive
     },
 
     hideContent: function() {
