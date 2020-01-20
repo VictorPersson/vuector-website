@@ -31,7 +31,7 @@ export default {
 @import '../../sass/variables.scss';
 
 .section1 {
-  height: auto;
+  min-height: 100vh;
 }
 
 .sectionContainer {

@@ -12,7 +12,7 @@
       href="https://www.linkedin.com/in/victor-persson-755952171/"
       target="_blank"
     >
-      <span class="footer-links__span">LiknedIN</span>
+      <span class="footer-links__span">Linkedin</span>
     </a>
     <a
       class="footerLinks__effect footerLinks__text"
