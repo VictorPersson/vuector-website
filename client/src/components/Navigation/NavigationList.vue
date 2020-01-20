@@ -7,10 +7,10 @@
         <router-link @click.native="toggleMenu" to="/" tag="li" active-class="active" class="list">
          <a class="list__items">Home</a>
         </router-link>
-        <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
-          <a class="list__items">About</a>
+        <router-link @click.native="toggleMenu" to="/cv" tag="li" active-class="active" class="list">
+          <a class="list__items">Resume</a>
         </router-link>
-        <router-link @click.native="toggleMenu" to="/projects" tag="li" active-class="active" class="list">
+        <router-link @click.native="toggleMenu" to="/cv" tag="li" active-class="active" class="list">
           <a class="list__items">Projects</a>
         </router-link>
         <router-link @click.native="toggleMenu" to="/wishlist" tag="li" active-class="active" class="list">
@@ -76,14 +76,6 @@ export default {
   right: 0;
 }
 
-
-.navHeader {
-    font-size: 4rem;
-    font-family: $fontHeader;
-    color: $greenMedium;
-    text-align: center;
-  }
-
 .list {
   list-style: none;
   text-align: center;
@@ -103,4 +95,16 @@ export default {
     }
   }
 }
+
+
+@media screen and (max-width: 480px) {
+  
+  .list__items {
+      font-size: 5rem;
+    }
+  
+  
+   }
+
+
 </style>

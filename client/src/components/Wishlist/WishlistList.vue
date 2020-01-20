@@ -17,8 +17,9 @@ export default {
         return {
             headerText: "Önsking",
             items: [
-                { wish: "Mobil", link: "https://www.netonnet.se/art/telefoner/mobiltelefoner/iphone/apple-iphone-8-64gb-space-grey/247707.9044/?showSubscriptionModal=false&pTab=standard" },
+                { wish: "Ny mobil", link: "https://www.netonnet.se/art/telefoner/mobiltelefoner/iphone/apple-iphone-8-64gb-space-grey/247707.9044/?showSubscriptionModal=false&pTab=standard" },
                 { wish: "Tax", link: "https://www.skk.se/sv/kopahund/hundraser-valpkullar/tax/?show=breeders" },
+                { wish: "Stockholm", link: "https://www.sj.se/?a=b&ds_rl=1249642&gclid=Cj0KCQiAvJXxBRCeARIsAMSkAprowOFUeFKnIK5FY88jf39i6J5x_5U3rh3AZa_v-DM6sLmxyPmFhQcaAo_fEALw_wcB&gclsrc=aw.ds#/sok/Malm%25C3%25B6%2520C/Stockholm%2520Central/enkel/avgang/20200120-1449/avgang/20200120-1500/VU--///0///" },   
                 { wish: "Skateboard", link: "https://www.boardlife.se/produkt-kategori/skateboard/complete-skateboards/?v=f003c44deab6" }            
                 ]
         }
@@ -44,6 +45,7 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
     padding: 4rem;
+    padding-top: 2rem;
 }
 
 .listItem {
