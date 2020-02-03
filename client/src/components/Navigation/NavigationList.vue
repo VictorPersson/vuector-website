@@ -10,7 +10,7 @@
         <router-link @click.native="toggleMenu" to="/cv" tag="li" active-class="active" class="list">
           <a class="list__items">Resume</a>
         </router-link>
-        <router-link @click.native="toggleMenu" to="/cv" tag="li" active-class="active" class="list">
+        <router-link @click.native="toggleMenu" to="/projects" tag="li" active-class="active" class="list">
           <a class="list__items">Projects</a>
         </router-link>
         <router-link @click.native="toggleMenu" to="/wishlist" tag="li" active-class="active" class="list">
