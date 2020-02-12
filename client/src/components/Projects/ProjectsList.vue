@@ -2,14 +2,16 @@
     <div class="wishListListBox">
         <h1 class="MainHeader">Projects</h1>
         <div class="loader" v-if="isLoading"></div>
-        <ul class="ul" v-if="!isLoading"> 
-            <li class="listItem" v-for="(item, index) in items" v-bind:key="item.id">
-                <p class="listItem--header"> {{ item.name }} </p>
-                <p class="listItem--linkLanguage"> {{ item.language }} </p>
-                <p class="listItem--linkText"> {{ item.description }} </p>
-                <a class="listItem--linkButton" v-bind:href="item.html_url" target="_blank">Read more</a>
-            </li>
-        </ul>
+        <div class="test2">
+          <ul class="ul" v-if="!isLoading"> 
+              <li class="listItem" v-for="(item, index) in items" v-bind:key="item.id">
+                  <p class="listItem--header"> {{ item.name }} </p>
+                  <p class="listItem--linkLanguage"> {{ item.language }} </p>
+                  <p class="listItem--linkText"> {{ item.description }} </p>
+                  <a class="listItem--linkButton" v-bind:href="item.html_url" target="_blank">Read more</a>
+              </li>
+          </ul>
+        </div>
     </div>
 </template>
 
@@ -31,9 +33,12 @@ export default {
 
     created() {
         axios.get("https://api.github.com/users/VictorPersson/repos").then(response => {
-            console.log(response.data)
             this.items = response.data
+            this.items = this.items.filter((i) => i.fork !== true && i.name !== "politweet");
+                     
             this.isLoading = false
+            console.log(this.items)
+        
         }).catch(error => {
             console.log(error)
         })
@@ -77,8 +82,8 @@ export default {
     margin: 2rem;
     transition: all .5s;
     cursor: pointer;
-    max-width: 25rem;
-    min-width: 25rem;
+    max-width: 28rem;
+    min-width: 30rem;
 
     &:hover {
          box-shadow: $boxShadowMoved;
@@ -87,13 +92,13 @@ export default {
 
     &--header {
         font-family: $fontHeader;
-        margin-bottom: 2rem;
         font-size: 2rem;
     }
 
     &--linkText {
         margin-bottom: 3rem;
         font-size: 1.2rem;
+        min-height: 5rem;
     }
 
     &--linkLanguage {
@@ -109,10 +114,10 @@ export default {
         padding-left: 5rem;
         padding-right: 5rem;
         transition: .4s;
+        
 
         &:hover {
             background: $greyDark;
-            animation: fall-down;
         }
     }
 }

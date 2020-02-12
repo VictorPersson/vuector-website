@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <SplashScreen v-if="splashScreenShow"/>
+    <SplashScreen v-if="splashScreenShow && !$route.meta.hideContent" />
     <router-view></router-view>
     <Header v-show="splashScreenHidden" v-if="!$route.meta.hideContent"/>
     <Navigation 
