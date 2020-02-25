@@ -5,15 +5,15 @@
 
       <div class="form--userInformation">
         <label class="form--userInformation__nameLabel" for="fname">Name</label> 
-        <input class="form--userInformation__nameInput" v-model="title" placeholder="Name" />
+        <input autocomplete="false" class="form--userInformation__nameInput" v-model="title" placeholder="Name" />
 
         <label class="form--userInformation__emailLabel" for="femail">Email</label>
-        <input class="form--userInformation__emailInput" id="femail" v-model="femail" placeholder="Email" />
+        <input autocomplete="off" class="form--userInformation__emailInput" id="femail" v-model="femail" placeholder="Email" />
       </div>
 
     <div class="form--userText">
       <label class="form--userText__textLabel" for="ftext">Message</label>
-      <textarea class="form--userText__textInput" v-model="message" placeholder="Message">Message</textarea>
+      <textarea autocomplete="off" class="form--userText__textInput" v-model="message" placeholder="Message">Message</textarea>
     </div>
     </form>
 
@@ -166,6 +166,21 @@ export default {
       outline: none;
     }
  }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid none;
+  -webkit-text-fill-color: $greenLight;
+  -webkit-box-shadow: 0 0 0px 1000px none inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
 
  .formButtonBox {
