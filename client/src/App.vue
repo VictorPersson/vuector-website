@@ -8,7 +8,7 @@
                 v-if="splashScreenHidden"
                 />
     <Section1 v-show="splashScreenHidden" v-if="!$route.meta.hideContent"/>
-    <Footer v-show="splashScreenHidden"/>
+    <Footer v-show="splashScreenHidden" v-if="!$route.meta.hideContent"/>
   </div>
 </template>
 

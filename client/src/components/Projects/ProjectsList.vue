@@ -82,8 +82,8 @@ export default {
     margin: 2rem;
     transition: all .5s;
     cursor: pointer;
-    max-width: 28rem;
-    min-width: 30rem;
+    max-width: 27rem;
+    min-width: 27rem;
 
     &:hover {
          box-shadow: $boxShadowMoved;
@@ -92,7 +92,7 @@ export default {
 
     &--header {
         font-family: $fontHeader;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     &--linkText {
@@ -182,6 +182,21 @@ export default {
     box-shadow: 0 2.5em 0 0;
   }
 }
-</style>
+
+@media screen and (max-width: 480px) {
+
+.MainHeader {
+  margin-top: 3.8rem;
+  margin-bottom: 0rem;
+}
+
+  .listItem {
+    max-width: 25rem;
+    min-width: 25rem;
+  }
+
+  }
 
 </style>
+
+

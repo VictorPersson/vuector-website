@@ -52,6 +52,7 @@ export default {
 
 }
 
+
 .comma {
   display: inline-block;
   font-family: $fontHeader;
