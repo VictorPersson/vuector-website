@@ -91,6 +91,7 @@ export default {
       width: 50%;
       z-index: 1;
       transition: all .5s;
+      color: $greenLight;
 
       &:focus {
         border-bottom: .1rem solid $greenLight;
@@ -115,6 +116,7 @@ export default {
       width: 50%;
       z-index: 1;
       transition: all .5s;
+      color: $greenLight;
 
       &:focus {
         border-bottom: .1rem solid $greenLight;
@@ -147,6 +149,7 @@ export default {
       width: 100%;
       z-index: 1;
       transition: all .5s;
+      color: $greenLight;
 
       &:focus {
         border-bottom: .1rem solid $greenLight;
@@ -176,7 +179,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: 1px solid none;
+  border-bottom: 1px solid $greenLight;
   -webkit-text-fill-color: $greenLight;
   -webkit-box-shadow: 0 0 0px 1000px none inset;
   transition: background-color 5000s ease-in-out 0s;

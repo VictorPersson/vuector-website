@@ -2,7 +2,6 @@
   <div class="menuBox">
     <div class="menuSplash-1">
       <div class="menuSplash-2">
-    <!--<h3 class="navHeader">More pages coming soon...</h3> -->
      <ul class="list">
         <router-link @click.native="toggleMenu" to="/" tag="li" active-class="active" class="list">
          <a class="list__items">Home</a>

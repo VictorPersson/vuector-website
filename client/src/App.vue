@@ -24,7 +24,7 @@ export default {
     return {
       splashScreenShow: true,
       splashScreenHidden: false,
-      menuOptionActive: true
+      menuOptionActive: true,
     }
   },
 

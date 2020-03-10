@@ -9,7 +9,7 @@
     </a>
     <a
       class="footerLinks__effect footerLinks__text"
-      href="https://www.linkedin.com/in/victor-persson-755952171/"
+      href="https://www.linkedin.com/in/vpersson"
       target="_blank"
     >
       <span class="footer-links__span">Linkedin</span>
