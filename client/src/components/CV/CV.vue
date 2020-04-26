@@ -1,12 +1,7 @@
 <template>
   <div class="cvBox">
-    <h1 class="cvBox--mainHeader">Victor Persson</h1>
-    <div class="cvBox--iconBox">
-      <span><i id="el" class="fas fa-code cvBox--icon"></i>asdas</span>
-      <i id="el" class="fas fa-user-graduate cvBox--icon"></i>
-      <i id="el" class="fas fa-briefcase cvBox--icon"></i>
-    </div>
-    <div class="cvBox--timeLine"></div>
+    <h1 class="cvBox--mainHeader">Resume</h1>
+    <img class="cvBox__cvImage" src="../../assets/cv.png" alt="Image of CV">
   </div>
 </template>
 
@@ -14,29 +9,12 @@
 export default {
   data() {
     return {
-      isScrolling: false,
-      scrolled: 0,
-      scroll1: false
     };
   },
-    el: '#el',
     methods: {
-    spinIcon: function() {
-      if ((this.scrolled = window.scrollY > 100)) {
-        el.classList.add('spinningIcon');
 
-      } else if ((this.scrolled = window.scrollY < 5)) {
-        el.classList.remove('spinningIcon');
-      }
-    },
   },
 
-  created() {
-    window.addEventListener("scroll", this.spinIcon);
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.spinIcon);
-  },
 
   components: {}
 };
@@ -45,31 +23,10 @@ export default {
 <style scoped lang="scss">
 @import "../../sass/variables.scss";
 @import "../../sass/animations.scss";
+@import '../../sass/mixins.scss';
 
 .cvBox {
-  height: 200vh;
-
-  &--timeLine {
-    margin-top: 5rem;
-    margin-left: 10rem;
-    height: 100%;
-    width: .3rem;
-    background: $greenMedium;
-    position: relative;
-  }
-
-  &--iconBox {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-  }
-
-  &--icon {
-    margin-bottom: 15rem;
-    margin-left: 2rem;
-    font-size: 5rem;
-    color: $greyMedium;
-  }
+  height: 100vh;
 
   &--mainHeader {
     color: $greyDark;
@@ -79,15 +36,15 @@ export default {
     margin-top: 1rem;
 }
 
-  .spinningIcon {
-    transform: rotate(35deg);
+&__cvImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include responsive(phone) {
+    width: 100vw;
   }
-
 }
 
-@media screen and (max-width: 480px) {
-  .underConstruction__images {
-    font-size: 4rem;
-  }
 }
 </style>
