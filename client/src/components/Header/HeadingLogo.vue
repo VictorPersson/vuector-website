@@ -24,11 +24,6 @@ export default {
 @import "../../sass/animations.scss";
 
 
-svg {
-  transform: rotate(180deg);
-  color: black;
-}
-
 .triangleBackground-1 {
   height: 110vh;
   background-color: $greenMedium;
@@ -53,12 +48,4 @@ svg {
     position: relative;
 }
 
-
-@media screen and (max-width: 480px) {
-
-  .triangleBackground-1 {
-    
-  }
-
-}
 </style>

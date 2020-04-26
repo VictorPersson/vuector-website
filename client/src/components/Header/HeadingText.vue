@@ -27,7 +27,6 @@ export default {
 
 }
 
-
 .headerText {
   justify-content: center;
   font-family: $fontMain;
@@ -35,6 +34,7 @@ export default {
   margin: 0rem 40rem 4rem 2rem;
   margin-top: 10rem;
 }
+
 
 @media screen and (max-width: 480px) {
   .section1Header {

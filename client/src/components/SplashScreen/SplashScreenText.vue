@@ -59,6 +59,10 @@ export default {
     color: $white;
     animation-delay: .4s;
 
+    @include responsive(tab-normal) {
+        font-size: 13rem;
+    }
+
       @include responsive(phone) {
         font-size: 6rem;
       }

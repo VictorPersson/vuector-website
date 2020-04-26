@@ -49,7 +49,6 @@ export default {
     font-family: $fontMain;
     margin-top: -2rem;
   }
-
 }
 
 
@@ -62,6 +61,20 @@ export default {
 .betaText {
   font-family: $fontHeader;
   color: $greenMedium;
+}
+
+  @media screen and (max-width: 1050px) {
+  .mainH1 {
+    margin-left: 20rem;
+
+    &--1 {
+      font-size: 7.5rem;
+    }
+
+    &--2 {
+      font-size: 2.2rem;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {

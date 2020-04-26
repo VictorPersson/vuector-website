@@ -27,6 +27,14 @@ export default {
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .imageBox {
+    &--image {
+      margin-left: 7rem;
+      }
+    }
+}
+
 @media screen and (max-width: 480px) {
   .imageBox {
       //box-shadow: 50px 50px $boxGreenGlow;

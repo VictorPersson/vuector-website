@@ -4,7 +4,7 @@
         <div class="loader" v-if="isLoading"></div>
         <div class="test2">
           <ul class="ul" v-if="!isLoading"> 
-              <li class="listItem" v-for="(item, index) in items" v-bind:key="item.id">
+              <li class="listItem" v-for="(item) in items" v-bind:key="item.id">
                   <p class="listItem--header"> {{ item.name }} </p>
                   <p class="listItem--linkLanguage"> {{ item.language }} </p>
                   <p class="listItem--linkText"> {{ item.description }} </p>
@@ -37,7 +37,6 @@ export default {
             this.items = this.items.filter((i) => i.fork !== true && i.name !== "politweet");
                      
             this.isLoading = false
-            console.log(this.items)
         
         }).catch(error => {
             console.log(error)
