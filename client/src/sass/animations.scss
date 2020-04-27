@@ -55,6 +55,19 @@
     }
 }
 
+
+@keyframes slide-in-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(15rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
 @keyframes fall-down {
     0% {
         transform: translateY(-100vh);
@@ -67,7 +80,6 @@
     100% {
         opacity: 1;
         transform: translate(7);
-       // transform: rotate(20deg);
     }
 }
 

@@ -34,12 +34,15 @@ export default {
     font-size: 6rem;
     text-align: center;
     margin-top: 1rem;
+
 }
 
 &__cvImage {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  animation: slide-in-bottom 1.2s;
   
   @include responsive(phone) {
     width: 100vw;
