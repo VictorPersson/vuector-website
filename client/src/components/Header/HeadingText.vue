@@ -20,6 +20,7 @@ export default {
 <style scoped lang="scss">
 @import "../../sass/variables.scss";
 @import "../../sass/animations.scss";
+@import '../../sass/mixins.scss';
 
 .section1Box {
   display: flex;
@@ -33,18 +34,10 @@ export default {
   font-size: 2rem;
   margin: 0rem 40rem 4rem 2rem;
   margin-top: 10rem;
-}
 
-
-@media screen and (max-width: 480px) {
-  .section1Header {
-    font-size: 3.8rem;
-    text-align: center;
-    margin: 0;
-  }
-
-  .headerText {
+  @include responsive(phone) {
     margin: 1rem 1.5rem 1.5rem 1.5rem;
   }
 }
+
 </style>

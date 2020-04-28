@@ -34,8 +34,7 @@ export default {
     created() {
         axios.get("https://api.github.com/users/VictorPersson/repos").then(response => {
             this.items = response.data
-            this.items = this.items.filter((i) => i.fork !== true && i.name !== "politweet");
-                     
+            this.items = this.items.filter((i) => i.full_name !== "VictorPersson/politweet" && !i.fork);        
             this.isLoading = false
         
         }).catch(error => {

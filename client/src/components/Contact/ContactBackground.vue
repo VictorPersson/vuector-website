@@ -1,9 +1,11 @@
 <template>
-  <div class="logoBox">
+  <div class="backgroundBox">
+      <!---
     <div class="triangleBackground-1"></div>
     <div class="triangleBackground-2"></div>
+    Needs correct CSS implementation
+    -->
   </div>
-  
 </template>
 
 <script>
@@ -12,37 +14,35 @@ export default {
     return {};
   },
 
-  methods: {}
+  components: {}
 };
 </script>
 
 <style scoped lang="scss">
 @import "../../sass/variables.scss";
 @import "../../sass/animations.scss";
+@import "../../sass/mixins.scss";
 
+.backgroundBox {
+    position: relative;
+    background: black;
+}
 
 .triangleBackground-1 {
-  height: 110vh;
+  height: 100vh;
   background-color: $greenMedium;
-  clip-path: polygon(10% 0, 50% 50%, 0 100%, 0 0);
-  transform: rotate(1deg);
+  clip-path: polygon(81% 66%, 0% 100%, 100% 100%);
   margin-left: -5rem;
   position: absolute;
   width: 100%;
-  
 }
 
 .triangleBackground-2 {
   margin-left: -5rem;
-  height: 120vh;
+  height: 100vh;
   background-color: $greenLight;
-  clip-path: polygon(10% 0, 50% 50%, 0 100%, 0 0);
-  transform: rotate(2deg);
+  clip-path: polygon(13% 62%, 0% 100%, 100% 100%);
   opacity: .5;
-}
-
-.logoBox {
-    position: relative;
 }
 
 </style>
