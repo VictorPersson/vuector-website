@@ -13,14 +13,14 @@
 export default {
   data() {
     return {
-      age: ""
+      age: 0
     };
   },
 
   methods: {
     getCurrentAge() {
       let currentDate = new Date();
-      let dob = new Date('February 9, 1996');
+      const dob = new Date('February 9, 1996');
 
       if (currentDate.getDate() < 9 && currentDate.getMonth() <= 1) {
               this.age = currentDate.getFullYear() - dob.getFullYear() - 1;
