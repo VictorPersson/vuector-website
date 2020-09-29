@@ -2,7 +2,7 @@
   <div class="section1Box">
     <h3 class="section1Header">About</h3>
     <p class="headerText">
-      My name is Victor Persson, I'm a {{this.age}}-year-old information architecture student Malmö University.
+      My name is Victor Persson, I'm a {{this.age}}-year-old Web Developer && Bachelor of Computer Science.
       History buff and tech-lover, front-end in general and web development in particular.
     </p>
   </div>
