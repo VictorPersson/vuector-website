@@ -37,9 +37,7 @@ export default {
             this.items = this.items.filter((i) => i.full_name !== "VictorPersson/politweet" && !i.fork);        
             this.isLoading = false
         
-        }).catch(error => {
-            console.log(error)
-        })
+        });
     }
 }
 
