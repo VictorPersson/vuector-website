@@ -6,10 +6,10 @@ import Projects from "./components/Projects/Projects.vue"
 
 
 export const routes = [
-    { name: "", path: "/", meta: {hideContent: false}},
-    { name: "contact", path: "/contact", component: Contact, meta: {hideContent: true}},
-    { name: "project", path: "/projects", component: Projects, meta: {hideContent: true}},
-    { name: "cv", path: "/cv", component: CV, meta: {hideContent: true}},
-    { name: "wishlist", path: "/wishlist", component: Wishlist, meta: {hideContent: true}},
-    { name: "asmrdarlinglew", path: "/asmrdarlinglew", component: LewParPink, meta: {hideContent: true}}
+    { name: "Home", path: "/", meta: {hideContent: false}},
+    { name: "Contact", path: "/contact", component: Contact, meta: {hideContent: true}},
+    { name: "Projects", path: "/projects", component: Projects, meta: {hideContent: true}},
+    { name: "CV", path: "/cv", component: CV, meta: {hideContent: true}},
+    { name: "Wishlist", path: "/wishlist", component: Wishlist, meta: {hideContent: true}},
+    { name: "Asmrdarlinglew", path: "/asmrdarlinglew", component: LewParPink, meta: {hideContent: true}}
 ];

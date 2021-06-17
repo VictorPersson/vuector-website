@@ -1,12 +1,16 @@
 <template>
     <div class="footerText">
-        <p class="footerText__para">Made with love, by Victor Persson - &copy; 2020. <br>Using Vue, SASS and a touch of my divine intellect</p>
+        <p class="footerText__para">Made with love, by Victor Persson - &copy; {{ currentYear }}. <br>Using Vue, SASS/SCSS and a touch of my divine intellect</p>
     </div>
 </template>
 
 <script>
 export default {
-  
+    computed: {
+        currentYear() {
+            return new Date().getFullYear();
+        } 
+    }
 };
 </script>
 
@@ -15,8 +19,6 @@ export default {
 
 
 .footerText {
-
-
     &__para {
         color: $white;
         text-align: center;

@@ -5,9 +5,6 @@
       <br>
       <img class="viapImage" src="https://i.imgur.com/YpaxlJM.png" alt="PinkViap">
       <p class="para1">Yours, Viap <i class="fas fa-joint"></i> </p>
-      <img class="lewImg" src="https://i.imgur.com/Hr6Ud3C.png" alt="">
-      <img class="lewImg" src="https://i.imgur.com/5dcZfSD.png" alt="">
-      <img class="lewImg" src="https://i.imgur.com/rllPpyS.png" alt="">
       <br>
   </div>
 </template>
