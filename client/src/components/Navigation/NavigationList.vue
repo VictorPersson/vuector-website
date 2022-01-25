@@ -2,20 +2,44 @@
   <div class="menuBox">
     <div class="menuSplash-1">
       <div class="menuSplash-2">
-     <ul class="list">
-        <router-link @click.native="toggleMenu" to="/" tag="li" active-class="active" class="list">
-         <a class="list__items">Home</a>
-        </router-link>
-        <router-link @click.native="toggleMenu" to="/cv" tag="li" active-class="active" class="list">
-          <a class="list__items">Resume</a>
-        </router-link>
-        <router-link @click.native="toggleMenu" to="/projects" tag="li" active-class="active" class="list">
-          <a class="list__items">Projects</a>
-        </router-link>
-        <router-link @click.native="toggleMenu" to="/contact" tag="li" active-class="active" class="list">
-          <a class="list__items">Contact</a>
-        </router-link>
-      </ul>
+        <ul class="list">
+          <router-link
+            @click.native="toggleMenu"
+            to="/"
+            tag="li"
+            active-class="active"
+            class="list"
+          >
+            <a class="list__items">Home</a>
+          </router-link>
+          <router-link
+            @click.native="toggleMenu"
+            to="/cv"
+            tag="li"
+            active-class="active"
+            class="list"
+          >
+            <a class="list__items">Resume</a>
+          </router-link>
+          <router-link
+            @click.native="toggleMenu"
+            to="/projects"
+            tag="li"
+            active-class="active"
+            class="list"
+          >
+            <a class="list__items">Projects</a>
+          </router-link>
+          <router-link
+            @click.native="toggleMenu"
+            to="/contact"
+            tag="li"
+            active-class="active"
+            class="list"
+          >
+            <a class="list__items">Contact</a>
+          </router-link>
+        </ul>
       </div>
     </div>
   </div>
@@ -24,15 +48,14 @@
 <script>
 export default {
   data() {
-    return {
-    };
+    return {};
   },
 
   methods: {
     toggleMenu: function() {
-      this.$emit('menuOptionMade');
-    }
-  }
+      this.$emit("menuOptionMade");
+    },
+  },
 };
 </script>
 
@@ -40,10 +63,9 @@ export default {
 @import "../../sass/variables.scss";
 @import "../../sass/animations.scss";
 
-
 .menuBox {
   transition: ease-in;
-  animation: menu-slide .6s;
+  animation: menu-slide 0.6s;
   z-index: 10;
   background-color: $greyLight;
   min-height: 100vh;
@@ -54,7 +76,7 @@ export default {
 }
 
 .menuSplash-1 {
-  animation: menu-slide .8s;
+  animation: menu-slide 0.8s;
   transition: ease-in;
   background-color: $greyMedium;
   min-height: 100vh;
@@ -95,15 +117,9 @@ export default {
   }
 }
 
-
 @media screen and (max-width: 480px) {
-  
   .list__items {
-      font-size: 5rem;
-    }
-  
-  
-   }
-
-
+    font-size: 5rem;
+  }
+}
 </style>
