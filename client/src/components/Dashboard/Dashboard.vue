@@ -2,12 +2,14 @@
   <div class="dashboard">
     <div class="dashboardContainer">
       <dashboard-clock />
+      <dashboard-timer />
     </div>
   </div>
 </template>
 
 <script>
 import DashboardClock from "./DashboardClock";
+import DashboardTimer from "./DashboardTimer";
 
 export default {
   data() {
@@ -16,6 +18,7 @@ export default {
 
   components: {
     DashboardClock,
+    DashboardTimer,
   },
 };
 </script>
@@ -23,7 +26,6 @@ export default {
 <style lang="scss">
 .dashboardContainer {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  flex-direction: column;
 }
 </style>

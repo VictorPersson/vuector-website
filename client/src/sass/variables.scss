@@ -1,10 +1,10 @@
 // Font
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300|Thasadith');
-@import url('https://fonts.googleapis.com/css?family=Rock+Salt|Staatliches');
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300|Thasadith");
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt|Staatliches");
 
-$fontMain: 'Quicksand', sans-serif;
-$fontHeader: 'Staatliches', cursive;
-$fontTest2: 'Rock Salt', cursive;
+$fontMain: "Quicksand", sans-serif;
+$fontHeader: "Staatliches", cursive;
+$fontSecondary: "Rock Salt", cursive;
 
 // Colors
 
@@ -12,20 +12,18 @@ $redDark: #ff4757;
 $redLight: #ff6b81;
 
 $greenLight: #55efc4;
-$greenMedium: #18ECC0;
+$greenMedium: #18ecc0;
 $greenDark: #00b894;
 
-
-$greyDark: #2C3A47;
+$greyDark: #2c3a47;
 $greyMedium: #485460;
 $greyLight: #9aa0a5;
 
 $white: #ffffff;
 
-
 // Shadow - Glow
 
-$textGreenGlow: .1rem .1rem 1rem $greenLight;
-$boxGreenGlow: .1rem 1rem $greenLight;
-$boxShadow: 0 1rem 1rem rgba($greyDark, .15);
-$boxShadowMoved: 0 1rem 2rem rgba($greyDark, .15);
+$textGreenGlow: 0.1rem 0.1rem 1rem $greenLight;
+$boxGreenGlow: 0.1rem 1rem $greenLight;
+$boxShadow: 0 1rem 1rem rgba($greyDark, 0.15);
+$boxShadowMoved: 0 1rem 2rem rgba($greyDark, 0.15);

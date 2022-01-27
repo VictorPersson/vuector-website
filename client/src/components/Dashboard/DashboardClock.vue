@@ -42,6 +42,7 @@ export default {
 
 .dashboardClockContainer {
   display: flex;
+  justify-content: center;
 }
 
 .dashboardClockHeader {
