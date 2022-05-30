@@ -3,12 +3,14 @@
     <div class="dashboardContainer">
       <dashboard-clock />
       <dashboard-timer />
+      <dashboard-links />
     </div>
   </div>
 </template>
 
 <script>
 import DashboardClock from "./DashboardClock";
+import DashboardLinks from "./DashboardLinks";
 import DashboardTimer from "./DashboardTimer";
 
 export default {
@@ -19,6 +21,7 @@ export default {
   components: {
     DashboardClock,
     DashboardTimer,
+    DashboardLinks,
   },
 };
 </script>
