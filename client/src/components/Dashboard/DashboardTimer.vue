@@ -2,14 +2,22 @@
   <div class="dashboardTimer">
     <div class="dashboardTimerContainer">
       <input type="number" class="dashboardTimerInput" min="1" v-model="time" />
-      <button class="dashboardTimerStartButton" v-on:click="startTimer">
+      <button
+        v-if="!timerActive"
+        class="dashboardTimerStartButton"
+        v-on:click="startTimer"
+      >
         Start
       </button>
-      <button class="dashboardTimerStartButton" v-on:click="stopTimer">
-        Stop
+      <button
+        v-if="timerActive"
+        class="dashboardTimerStartButton"
+        @click="stopTimer"
+      >
+        {{ stopText }}
       </button>
       <audio id="myAudio">
-        <source src="src\assets\sound\hl2_alarm_sound.mp3" type="audio/ogg" />
+        <source src="src\assets\sound\hl2_alarm_sound.ogg" type="audio/ogg" />
         <source src="src\assets\sound\hl2_alarm_sound.mp3" type="audio/mpeg" />
       </audio>
     </div>
@@ -22,28 +30,34 @@ export default {
     return {
       time: 60,
       timerActive: false,
+      interval: setInterval,
+      stopText: "Stop",
+      soundEl: document.getElementById("myAudio"),
     };
   },
   methods: {
     startTimer() {
       if (this.time > 0 || typeof this.time === "number") {
-        const interval = setInterval(() => {
-          !this.time ? this.stopInterval(interval) : this.time--;
+        this.timerActive = !this.timerActive;
+        this.interval = setInterval(() => {
+          !this.time ? this.timerComplete() : this.time--;
         }, 1000);
       } else {
         alert("Not valid numb");
       }
     },
     stopTimer() {
-      this.timerActive = false;
-      var x = document.getElementById("myAudio");
-      x.pause();
+      if (this.time <= 0) {
+        this.soundEl.pause();
+      } else {
+        clearInterval(this.interval);
+      }
+      this.timerActive = !this.timerActive;
     },
-    stopInterval(interval) {
-      var x = document.getElementById("myAudio");
-      x.play();
-      clearInterval(interval);
-      this.time = 0;
+    timerComplete() {
+      this.soundEl.play();
+      clearInterval(this.interval);
+      // Make red
     },
   },
 };
